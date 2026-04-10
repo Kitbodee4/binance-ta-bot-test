@@ -1,11 +1,11 @@
 # Agent Guidance for Binance TA Bot
 
 ## Essential Commands
-- Run bot (dry-run): `python -m binance_ta_bot`
-- Live trading: `python -m binance_ta_bot --mode execute`
-- Check bot state: `python -m binance_ta_bot --mode status`
-- Debug logging: `python -m binance_ta_bot --verbose`
-- Custom config: `python -m binance_ta_bot --config <path>`
+- Run bot (dry-run): `python3 __main__.py`
+- Live trading: `python3 __main__.py --mode execute`
+- Check bot state: `python3 __main__.py --mode status`
+- Debug logging: `python3 __main__.py --verbose`
+- Custom config: `python3 __main__.py --config <path>`
 - CLI script: `binance-ta-bot` (installed via pip)
 
 ## Testing
@@ -19,7 +19,7 @@
 3. Install dependencies: `pip install -e .` (or `pip install .`)
 
 ## Architecture Overview
-- Entry point: `__main__.py` → `main.py:main()`
+- Entry point: `__main__.py` → `main:main()`
 - Core flow: scanner → strategy → risk → execution
 - Key files:
   - Orchestration: `core/bot_engine.py`
