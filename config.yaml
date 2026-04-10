@@ -1,0 +1,67 @@
+exchange:
+  name: binanceusdm
+  sandbox: false
+
+strategy:
+  ema_fast: 9
+  ema_slow: 21
+  entry_tf: "15m"        # timeframe สำหรับ entry signal
+  trend_tf: "1h"        # timeframe สำหรับ trend
+  htf_tf: "4h"          # higher timeframe สำหรับ trend confirmation
+  entry_limit: 1000
+  trend_limit: 1000
+  htf_limit: 1000
+  rsi_period: 14
+  rsi_overbought: 70
+  rsi_oversold: 30
+  volume_avg_period: 20
+  volume_spike_mult: 2.5
+  # Higher timeframe EMA parameters
+  htf_ema_fast: 50
+  htf_ema_slow: 200
+  htf_ranging_threshold_pct: 0.005
+  # Regime detection parameters
+  regime_detection: true
+  adx_period: 14
+  adx_threshold: 25
+  # Dynamic timeframe adjustment parameters
+  dynamic_timeframes: true
+  volatility_lookback: 14
+
+risk:
+  risk_per_trade: 0.01
+  max_leverage: 3
+  max_positions: 3
+  daily_loss_limit: 0.03
+  weekly_loss_limit: 0.08
+  min_sl_pct: 0.02
+  max_sl_pct: 0.06
+  gap_multiplier: 1.5
+  max_directional_exposure: 1
+  consecutive_loss_pause: 3
+  consecutive_loss_halt: 5
+
+circuit_breaker:
+  flash_crash_pct: 0.05
+  flash_crash_window_sec: 60
+  halt_duration_min: 60
+  max_slippage_pct: 0.001
+  ws_reconnect_backoff: [1, 2, 4, 8, 30]
+
+backtest:
+  gap_probability: 0.05
+  gap_fill_distance_pct: 0.01
+  slippage_base_pct: 0.0002
+  slippage_volume_tier: true
+
+scanner:
+  top_n_pairs: 20
+  min_volume_usd: 10000000
+  exclude_patterns:
+    - "/USDC:USDC"
+
+bot:
+  scan_interval_sec: 60
+  dry_run: true
+  log_level: INFO
+  initial_equity: 1000    

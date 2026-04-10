@@ -1,0 +1,17 @@
+{
+    "$schema": "https://json.schemastore.org/claude-code-settings.json",
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "env": {
+      "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
+      "ANTHROPIC_AUTH_TOKEN": "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", 
+      "ANTHROPIC_DEFAULT_SONNET_MODEL": "nvidia/nemotron-3-super-120b-a12b:free",
+      "ANTHROPIC_DEFAULT_OPUS_MODEL": "nvidia/nemotron-3-super-120b-a12b:free",
+      "ANTHROPIC_DEFAULT_HAIKU_MODEL": "nvidia/nemotron-3-super-120b-a12b:free"
+    },
+    "companyAnnouncements": [
+      "Running glm-4.7 via Moonshot AI API (non-Claude model)",
+      "Endpoint: api.moonshot.ai/antropic | Model: glm-4.7",
+      "Some Claude Code features may not work with non-Anthropic models"
+    ]
+  }
+  
