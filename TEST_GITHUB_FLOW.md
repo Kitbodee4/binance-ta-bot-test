@@ -23,3 +23,7 @@ In this test scenario:
 - When we push, it should help create a PR
 
 This demonstrates the skill working as intended.
+
+## Additional Test
+
+Adding more content to test multiple commits in the same feature branch.
